@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background: #0a0d13;
+  color: #e6e9ef;
+  font-feature-settings: "cv02", "cv03", "cv04", "tnum";
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer components {
+  .panel {
+    @apply bg-surface border border-line rounded-lg shadow-card;
+  }
+  .panel-head {
+    @apply flex items-center justify-between gap-2 px-3.5 h-10 border-b border-line shrink-0;
+  }
+  .panel-title {
+    @apply text-[12px] font-semibold tracking-wide text-ink;
+  }
+  .label {
+    @apply text-2xs uppercase tracking-[0.14em] text-ink3 font-medium;
+  }
+  .kbd {
+    @apply font-mono text-2xs px-1 py-0.5 rounded border border-line bg-surface2 text-ink2;
+  }
+  .btn-icon {
+    @apply grid h-8 w-8 place-items-center rounded-md border border-line text-ink2 transition-colors hover:bg-surface2 hover:text-ink disabled:opacity-50;
+  }
+
+  .scroll::-webkit-scrollbar { width: 8px; height: 8px; }
+  .scroll::-webkit-scrollbar-track { background: transparent; }
+  .scroll::-webkit-scrollbar-thumb {
+    background: #2b3445; border-radius: 99px; border: 2px solid transparent; background-clip: padding-box;
+  }
+  .scroll::-webkit-scrollbar-thumb:hover { background: #3a4760; background-clip: padding-box; }
+
+  .tnum { font-variant-numeric: tabular-nums; }
+}
+
+/* React Flow dark theme overrides */
+.react-flow__attribution { display: none; }
+.react-flow__edge-path { stroke-width: 1.5; }
+.react-flow__node { cursor: default; }
+.react-flow__handle { opacity: 0; }
+.react-flow__controls {
+  background: #141923;
+  border: 1px solid #212836;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: none;
+}
+.react-flow__controls-button {
+  background: #141923;
+  border-bottom: 1px solid #212836;
+  color: #aab3c2;
+  width: 26px;
+  height: 26px;
+}
+.react-flow__controls-button:hover { background: #1a2030; }
+.react-flow__controls-button svg { fill: #aab3c2; }
