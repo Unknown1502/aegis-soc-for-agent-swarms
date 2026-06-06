@@ -46,3 +46,8 @@ audit-chain.jsonl
 # Eval artifacts
 eval/results/
 eval/runs/
+
+# Deploy artifacts (local-only)
+.acr_name.tmp
+aegis_image.tar
+aegis_deploy.zip

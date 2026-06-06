@@ -8,7 +8,18 @@
 > AI Content Safety / Prompt Shields**, **Microsoft Entra Agent ID**, and
 > **Microsoft Defender for Cloud - AI Threat Protection**.
 
-[![python](https://img.shields.io/badge/python-3.11%2B-blue)]() [![license](https://img.shields.io/badge/license-MIT-green)]() [![status](https://img.shields.io/badge/status-hackathon%20MVP-orange)]()
+[![python](https://img.shields.io/badge/python-3.11%2B-blue)]() [![license](https://img.shields.io/badge/license-MIT-green)]() [![live](https://img.shields.io/badge/demo-LIVE-success)](https://aegis-soc.politesmoke-00695503.eastus.azurecontainerapps.io/)
+
+## 🔴 Live demo (all Azure integrations LIVE)
+
+**URL:** https://aegis-soc.politesmoke-00695503.eastus.azurecontainerapps.io/
+**Login:** `demo` / `aegis-demo`
+
+Sign in and click **EchoLeak chain (hero)** — the Verdict Feed flips to a red
+**CONFIRMED** and the swarm graph quarantines `victim.tool_executor` within
+~10 seconds. No outbound email ever leaves the mailbox. The live `/api/status`
+reports every Microsoft integration **LIVE** (Azure OpenAI guardians, Prompt
+Shields, Entra Agent ID, Defender for Cloud, Azure Monitor, Foundry tracing).
 
 **Quick links:** [QUICKSTART.md](QUICKSTART.md) (60-second judge walkthrough) | [DEPLOY.md](DEPLOY.md) (live URL deployment)
 

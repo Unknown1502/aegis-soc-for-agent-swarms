@@ -2,8 +2,18 @@
  * Thin wrapper around the AEGIS API + WebSocket stream.
  */
 
+// VITE_AEGIS_API: explicit API origin for dev (Vite on :5173 talking to the
+// API on :8088). In production the dashboard is served from the SAME origin as
+// the API, so the build sets VITE_AEGIS_API="" and we resolve to the current
+// page origin at runtime — this keeps REST and WebSocket URLs absolute and
+// correct (an empty base would produce an invalid `ws:///ws/stream` URL).
+const _configuredBase = (import.meta as any).env?.VITE_AEGIS_API as string | undefined;
 const API_BASE: string =
-  (import.meta as any).env?.VITE_AEGIS_API ?? "http://127.0.0.1:8088";
+  _configuredBase && _configuredBase.length > 0
+    ? _configuredBase
+    : typeof window !== "undefined"
+      ? window.location.origin
+      : "http://127.0.0.1:8088";
 
 export interface LoginResponse {
   token: string;
